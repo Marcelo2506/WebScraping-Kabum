@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
 import math
 import re
@@ -14,8 +15,14 @@ options.add_argument('--headless')  # roda invisível
 options.add_argument('--disable-gpu')
 options.add_argument('--no-sandbox')
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
+options.add_argument('--disable-dev-shm-usage')
+options.add_argument("window-size=1920,1080")
 
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(
+    service=Service("/usr/bin/chromedriver"),
+    options=options
+)
+
 
 url_base = 'https://www.kabum.com.br/celular-smartphone'
 driver.get(url_base)
