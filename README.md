@@ -57,8 +57,8 @@ O processo é dividido em três etapas: **configurar o ambiente**, **executar a 
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-    cd SEU_REPOSITORIO
+    git clone https://github.com/Marcelo2506/WebScraping-Kabum.git
+    cd WebScraping-Kabum
     ```
 
 2.  **Crie e configure o arquivo `.env`:**
